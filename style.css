@@ -1,0 +1,104 @@
+body { margin: -2px; }
+
+img {  
+    max-width: 100%;  
+    height: auto;  
+}
+
+footer {
+    font-size: small;
+    font-family: Josefin Slab;
+}
+
+.bg-img {
+    background-image: url('space.jpg');
+
+    filter: blur(8px);
+    -webkit-filter: blur(3px);
+
+    background-size: cover; 
+    background-position: center; 
+    margin: -8px; 
+    padding: 210px;
+}
+
+.myDiv {
+    background-color:#ede8f1;
+    margin: -8px;
+    padding: 20px;
+    max-width: 100%;  
+    height: auto;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    }
+
+.sidebar a {
+    padding: 8px 8px 6px;
+    text-align: center;
+    text-decoration: none; /* hides the underline */
+    font-size: 28px;
+    color: #818181;
+    display: block;
+    font-family: Glory;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 250px;
+    font-size: 28px;
+    padding: 0px 10px;
+}
+
+.anni {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+
+.anni a{
+    text-decoration: none;
+}
+
+.anni a:hover{
+    color: crimson;
+}
+
+.testi {
+    font-family: Open Sans;
+    font-size: 19px;
+}
+
+.pic202021 {
+    width: 93%;
+    height: auto;
+    margin-left: 43px;
+    display: flex;
+}
+
+.sidebyside {
+    flex: 33.33%;
+    padding: 15px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+h1 {text-align: center; position: absolute;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
