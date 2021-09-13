@@ -1,8 +1,13 @@
+body
+{
+    overflow-x: hidden; /*fixes the page overflow issue */
+}
+
 body { margin: -2px; }
 
-img {  
-    max-width: 100%;  
-    height: auto;  
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -11,22 +16,19 @@ footer {
 }
 
 .bg-img {
-    background-image: url('space.jpg');
+    background-image: url('../Images/homepage/space.png');
 
-    filter: blur(8px);
-    -webkit-filter: blur(3px);
-    
-    background-size: cover; 
-    background-position: center; 
-    margin: -8px; 
+    background-size: cover;
+    background-position: center;
+    margin: -8px;
     padding: 210px;
 }
 
-.myDiv {
+.edcivica {
     background-color:#ede8f1;
-    padding: 20px;
-    max-width: 100%;  
-    height: 189px;
+    margin-top: 8px;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
 .sidebar {
@@ -39,7 +41,7 @@ footer {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
-    }
+}
 
 .sidebar a {
     padding: 8px 8px 6px;
@@ -61,18 +63,13 @@ footer {
     padding: 0px 10px;
 }
 
-.anni {
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: -20px;
-}
-
-.anni a{
+.years a{
+    color: #37086d;
     text-decoration: none;
 }
 
-.anni a:hover{
-    color: crimson;
+.years a:hover{
+    color:blueviolet ;
 }
 
 .testi {
@@ -96,7 +93,6 @@ footer {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
 }
-
 
 h2 {text-align: center;}
 h3 {text-align: center;}
