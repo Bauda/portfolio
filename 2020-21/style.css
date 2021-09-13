@@ -1,0 +1,66 @@
+body { margin: -2px; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    font-size: small;
+    font-family: Josefin Slab;
+}
+
+.bg-img {
+    background-image: url('../Images/2020-21/covid.png');
+
+    background-size: cover;
+    background-position: center;
+    margin: -8px;
+    padding: 210px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    }
+
+.sidebar a {
+    padding: 8px 8px 6px;
+    text-align: center;
+    text-decoration: none; /* hides the underline */
+    font-size: 28px;
+    color: #818181;
+    display: block;
+    font-family: Glory;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+}
+
+.main {
+    margin-left: 250px;
+    font-size: 28px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
