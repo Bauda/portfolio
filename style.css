@@ -1,194 +1,135 @@
-body
-{
-    overflow-x: hidden; /*fixes the page overflow issue */
-}
-
-body { margin: -2px; }
-
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 footer {
-    font-size: small;
-    font-family: Josefin Slab;
+  font-size: small;
+  font-family: Josefin Slab;
+}
+
+main {
+  margin-left: 280px;
+}
+
+.sidenav { /* makes the sidebar stay still */
+  width: 280px;
+  height: 100%;
+  position: fixed; /* Stay in place on scroll */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .5rem;
+  color: rgba(0, 0, 0, .65);
+  background-color: transparent;
+  border: 0;
+}
+
+.btn-ticc {
+  font-weight: 600;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, .85);
+  background-color: #d2f4ea;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='none' stroke='rgba(255,255,255,.6)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(255, 255, 255, 0.85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  display: inline-flex;
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+  text-decoration: none;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #064c5e;
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+.bi {
+  vertical-align: -.125em;
+  pointer-events: none;
+  fill: currentColor;
+}
+
+.sidenav a {
+  color: white;
+  text-decoration: none;
 }
 
 .bg-img {
-    background-image: url('Images/homepage/space.png');
+  background-image: url('Images/homepage/space.png');
 
-    background-size: cover;
-    background-position: center;
-    margin: -8px;
-    padding: 210px;
+  background-size: cover;
+  background-position: center;
+  margin: -8px;
+  padding: 210px;
 }
 
 .edcivica {
-    background-color:#ede8f1;
-    margin-top: 8px;
-    margin-left: -8px;
-    margin-right: -8px;
+  background-color:#ede8f1;
 }
 
-#sidebarCollapse {
-    width: 40px;
-    height: 40px;
-    background: #f5f5f5;
+.bottom_sidebar {
+  position: absolute;
+  bottom: 15px;
 }
 
-#sidebarCollapse span {
-    width: 80%;
-    height: 2px;
-    margin: 0 auto;
-    display: block;
-    background: #555;
-    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
-}
-
-#sidebarCollapse span:first-of-type {
-    /* rotate first one */
-    transform: rotate(45deg) translate(2px, 2px);
-}
-#sidebarCollapse span:nth-of-type(2) {
-    /* second one is not visible */
-    opacity: 0;
-}
-#sidebarCollapse span:last-of-type {
-    /* rotate third one */
-    transform: rotate(-45deg) translate(1px, -1px);
-}
-
-#sidebarCollapse.active span {
-    /* no rotation */
-    transform: none;
-    /* all bars are visible */
-    opacity: 1;
-    margin: 5px auto;
-}
-
-.wrapper {
-    display: flex;
-    align-items: stretch;
-    perspective: 1500px; 
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    background: #7386D5;
-    color: #fff;
-    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
-    transform-origin: center left; /* Set the transformed position of sidebar to center left side. */
-}
-
-#sidebar.active {
-    margin-left: -250px;
-    transform: rotateY(100deg); /* Rotate sidebar vertically by 100 degrees. */
-}
-
-@media (max-width: 768px) {
-    /* Reversing the behavior of the sidebar: 
-       it'll be rotated vertically and off canvas by default, 
-       collapsing in on toggle button click with removal of 
-       the vertical rotation.   */
-    #sidebar {
-        margin-left: -250px;
-        transform: rotateY(100deg);
-    }
-    #sidebar.active {
-        margin-left: 0;
-        transform: none;
-    }
-
-    /* Reversing the behavior of the bars: 
-       Removing the rotation from the first,
-       last bars and reappear the second bar on default state, 
-       and giving them a vertical margin */
-    #sidebarCollapse span:first-of-type,
-    #sidebarCollapse span:nth-of-type(2),
-    #sidebarCollapse span:last-of-type {
-        transform: none;
-        opacity: 1;
-        margin: 5px auto;
-    }
-
-    /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
-    #sidebarCollapse.active span {
-        margin: 0 auto;
-    }
-    #sidebarCollapse.active span:first-of-type {
-        transform: rotate(45deg) translate(2px, 2px);
-    }
-    #sidebarCollapse.active span:nth-of-type(2) {
-        opacity: 0;
-    }
-    #sidebarCollapse.active span:last-of-type {
-        transform: rotate(-45deg) translate(1px, -1px);
-    }
-}
-
-.sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidebar a {
-    padding: 8px 8px 6px;
-    text-align: center;
-    text-decoration: none; /* hides the underline */
-    font-size: 28px;
-    color: #818181;
-    display: block;
-    font-family: Glory;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.main {
-    margin-left: 250px;
-    font-size: 28px;
-    padding: 0px 10px;
+.btn:focus {
+outline: none !important;
+box-shadow: none !important;
 }
 
 .years a{
-    color: #37086d;
-    text-decoration: none;
+  color: #37086d;
+  text-decoration: none;
 }
 
 .years a:hover{
-    color:blueviolet ;
+  color:blueviolet ;
 }
 
 .testi {
-    font-family: Open Sans;
-    font-size: 19px;
+  font-family: Open Sans;
+  font-size: 19px;
 }
 
 .pic202021 {
-    width: 93%;
-    height: auto;
-    margin-left: 43px;
-    display: flex;
+  width: 93%;
+  height: auto;
+  margin-left: 43px;
+  display: flex;
 }
 
 .sidebyside {
-    flex: 33.33%;
-    padding: 15px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
+  flex: 33.33%;
+  padding: 15px;
 }
 
 h2 {text-align: center;}

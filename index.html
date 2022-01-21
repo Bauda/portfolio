@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- Meta tags -->
   <meta charset="utf-8">
-
-  <!-- responsive viewport meta tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- CSS Stylesheet -->
@@ -17,128 +15,170 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
+  <!-- FontAwesome embedding -->
+  <script src="https://kit.fontawesome.com/80246f294b.js" crossorigin="anonymous"></script>
+
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Glory&family=Josefin+Slab&family=Macondo+Swash+Caps&family=Oswald&family=Roboto&family=Ruthie&family=Urbanist&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Glory&family=Josefin+Slab&family=Macondo+Swash+Caps&family=Oswald&family=Roboto&family=Ruthie&family=Urbanist&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="wrapper">
+  <svg style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>Bootstrap</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    <symbol id="home" viewBox="0 0 16 16">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </symbol>
+  </svg>
 
-  <nav id="sidebar">
-      <!-- Sidebar Header -->
-      <div class="sidebar-header">
-          <h3>Collapsible Sidebar</div>
-      </div>
-
-      <!-- Sidebar Links -->
-      <ul class="list-unstyled components">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><!-- Link with dropdown items -->
-              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li><a href="#">Page</a></li>
-                  <li><a href="#">Page</a></li>
-                  <li><a href="#">Page</a></li>
-              </ul>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidenav">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-4">Simone Laudani</span>
+    </a>
+    <hr>
+    <ul class="list-unstyled ps-0">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+            PLACEHOLDER
+          </a>
+        </li>
       </ul>
-  </nav>
+      <hr>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#yr2020_21-collapse" aria-expanded="false"></button>
+        <a href="2020-21/2020-21.html" class="btn-ticc">Anno 2020-21</a>
+        <div class="collapse" id="yr2020_21-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-white rounded">Fake News</a></li>
+            <li><a href="#" class="link-white rounded">Il Diritto d'Asilo</a></li>
+            <li><a href="#" class="link-white rounded">La Netiquette</a></li>
+            <li><a href="#" class="link-white rounded">Il Partigianato in Italia</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#yr2021_22-collapse" aria-expanded="false"></button>
+        <a href="pages/work-in-progress.html" class="btn-ticc">Anno 2021-22</a>
+        <div class="collapse" id="yr2021_22-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-white rounded">Identita' digitale e SPID</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#yr2022_23-collapse" aria-expanded="false"></button>
+        <a href="pages/work-in-progress.html" class="btn-ticc">Anno 2022-23</a>
+        <div class="collapse" id="yr2022_23-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-white rounded">Work in progress...</a></li>
+          </ul>
+        </div>
+        <hr>
+      </li>
+    </ul>
+    
+    <div class="bottom_sidebar">
+      <hr style="width: 250px;">
+      <!-- LinkedIn -->
+      <a class="btn btn-primary" target="_blank" style="background-color: #0082ca; width: 32%;" href="https://www.linkedin.com/in/bauda/" role="button">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- GitHub -->
+      <a class="btn btn-primary border border-secondary" target="_blank" style="background-color: #333333; width: 32%;" href="https://github.com/Bauda/portfolio" role="button">
+        <i class="fab fa-github"></i>
+      </a>
+      <!-- Mail -->
+      <a class="btn btn-primary border border-danger" target="_blank" style="background-color: #960f0fbb; width: 32%;" href="mailto:simone.laudani@istitutoagnelli.it" role="button">
+        <i class="fas fa-envelope-open-text"></i>
+      </a>
+    </div>
+  </div>
 
-  <div id="content">
-      <button type="button" id="sidebarCollapse" class="navbar-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-      </button>
-  <div>
-
-</div>
-
-<div class="main">
-
-<div class="bg-img">
+<main>
   <div class="text-center">
       <h1 style="color: aliceblue; font-family: Roboto Thin; font-weight: 700;">
         <b>Cittadinanza <br> e <br> Costituzione</b>
       </h1>
-  </div>
-</div>
 
-<div class="edcivica">
-  <h2 style="color: #37086d;">Educazione civica</h2>
-  <p class="text-center" style="font-family: Urbanist; color:indigo; font-size: large; height: auto;">
-    Il <b>24 giugno 2020</b> il Ministero dell'Istruzione ha inviato a tutte le scuole le linee guida per l'insegnamento di una nuova materia obbligatoria, <b>l'educazione civica</b>. 
-    La nuova disciplina in questione vanta, oltre ad <b>un voto proprio</b> in pagella, di ben <b>33 ore obbligatorie</b> e verte su <b>temi di importanza attuale</b>, come l'ambiente. 
-    Questo portfolio sarà il <i>"contenitore"</i> di tali argomenti svolti, un posto in cui questi ultimi saranno da me esposti nel miglior modo possibile.
+  <div class="edcivica">
+    <h2 style="color: #37086d;">Educazione civica</h2>
+    <p class="text-center" style="font-family: Urbanist; color:indigo; font-size: large; height: auto;">
+      Il <b>24 giugno 2020</b> il Ministero dell'Istruzione ha inviato a tutte le scuole le linee guida per l'insegnamento di una nuova materia obbligatoria, <b>l'educazione civica</b>. 
+      La nuova disciplina in questione vanta, oltre ad <b>un voto proprio</b> in pagella, di ben <b>33 ore obbligatorie</b> e verte su <b>temi di importanza attuale</b>, come l'ambiente. 
+      Questo portfolio sarà il <i>"contenitore"</i> di tali argomenti svolti, un posto in cui questi ultimi saranno da me esposti nel miglior modo possibile.
+    </p>
+  </div>
+
+  <p>
+    <a style="margin-top: 8px;" class="btn btn-dark" data-bs-toggle="collapse" href="#collapsePortfolio" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Cos'è un portfolio?
+    </a>
   </p>
-</div>
+  <div class="collapse" id="collapsePortfolio">
+    <p style="font-size: 13px;" class="card card-body">
+      Un portfolio è una sorta di curriculum, ma molto più esaustivo ed in grado di rappresentare una persona in modo decisamente più approfondito. Si tratta, in pratica, di una raccolta dei propri lavori: viene usato molto nel campo della grafica, della fotografia e simili per presentarsi al meglio ai nuovi visitatori.<br>
+      Io, in questo caso, lo userò per esporre anno per anno tutti i lavori svolti dalla classe durante Educazione civica.</p>
+  </div>
 
-<p>
-  <a style="margin-top: 8px;" class="btn btn-dark" data-bs-toggle="collapse" href="#collapsePortfolio" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Cos'è un portfolio?
-  </a>
-</p>
-<div class="collapse" id="collapsePortfolio">
-  <p style="font-size: 13px;" class="card card-body">
-    Un portfolio è una sorta di curriculum, ma molto più esaustivo ed in grado di rappresentare una persona in modo decisamente più approfondito. Si tratta, in pratica, di una raccolta dei propri lavori: viene usato molto nel campo della grafica, della fotografia e simili per presentarsi al meglio ai nuovi visitatori.<br>
-    Io, in questo caso, lo userò per esporre anno per anno tutti i lavori svolti dalla classe durante Educazione civica.</p>
-</div>
+  <h3>Facciamo due chiacchere</h3>
+  <div class="testi">
+    <p class="text-center">
+      <b><i>Ciao!</i></b> Mi chiamo <b>Simone</b>, frequento una classe <b>ITT informatica</b> e sono appassionato, guarda un po', di informatica e di tutto il campo <b>tecnologico</b> in generale.
+      Questo sito è un portfolio diviso in <b>3 diversi anni scolastici</b>, a partire dal <em>2020 - 21</em> fino ad arrivare al <em>2022 - 23</em>. In ognuna di queste pagine allegherò, con il passare del tempo, le attività svolte <b>utili ed inerenti a questo portfolio</b>. 
+      Per aprire le pagine dei diversi anni basta scorrere un po' più in basso e cliccare sugli appositi collegamenti.
+    </p>
+  </div>
 
-<h3>Facciamo due chiacchere</h3>
-<div class="testi">
-  <p class="text-center">
-    <b><i>Ciao!</i></b> Mi chiamo <b>Simone</b>, frequento una classe <b>ITT informatica</b> e sono appassionato, guarda un po', di informatica e di tutto il campo <b>tecnologico</b> in generale.
-    Questo sito è un portfolio diviso in <b>3 diversi anni scolastici</b>, a partire dal <em>2020 - 21</em> fino ad arrivare al <em>2022 - 23</em>. In ognuna di queste pagine allegherò, con il passare del tempo, le attività svolte <b>utili ed inerenti a questo portfolio</b>. 
-    Per aprire le pagine dei diversi anni basta scorrere un po' più in basso e cliccare sugli appositi collegamenti.
-  </p>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="years">
+          <a style="margin: 155px;" href="2020-21/2020-21.html">Anno 2020 - 21</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="years">
+          <a style="margin: 100px;" href="pages/work-in-progress.html">Anno 2021 - 22</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="years">
+          <a style="margin: 70px;" href="pages/work-in-progress.html">Anno 2022 - 23</a>
+        </div>
+      </div>
 
-<div class="container">
-<div class="row">
-  <div class="col">
-    <div class="years">
-      <a style="margin: 155px;" href="../2020-21/2020-21.html">Anno 2020 - 21</a>
+      <div class="pic202021">
+          <div class="sidebyside">
+            <a href="2020-21/2020-21.html"><img src="Images/homepage/2020-21.jpg" alt="Covid 2019"></a>
+          </div>
+          <div class="sidebyside">
+            <a href="pages/work-in-progress.html"><img src="Images/homepage/ComingSoon.png" alt="Coming Soon!"></a>
+          </div>
+          <div class="sidebyside">
+            <a href="pages/work-in-progress.html"><img src="Images/homepage/ComingSoon.png" alt="Coming Soon!"></a>
+          </div>
+      </div>
     </div>
   </div>
-  <div class="col">
-    <div class="years">
-      <a style="margin: 100px;" href="../pages/work-in-progress.html">Anno 2021 - 22</a>
-    </div>
-  </div>
-  <div class="col">
-    <div class="years">
-      <a style="margin: 70px;" href="../pages/work-in-progress.html">Anno 2022 - 23</a>
-    </div>
-  </div>
 
-  <div class="pic202021">
-      <div class="sidebyside">
-        <a href="../2020-21/2020-21.html"><img src="../Images/homepage/2020-21.jpg" alt="Covid 2019"></a>
-      </div>
-      <div class="sidebyside">
-        <a href="../pages/work-in-progress.html"><img src="../Images/homepage/ComingSoon.png" alt="Coming Soon!"></a>
-      </div>
-      <div class="sidebyside">
-        <a href="../pages/work-in-progress.html"><img src="../Images/homepage/ComingSoon.png" alt="Coming Soon!"></a>
-      </div>
-  </div>
-</div>
-</div>
+  <footer>
+    <p>Questo sito è pensato per essere visualizzato a schermo intero su un computer.</p>
+  </footer>
 
-<footer>
-  <p>Questo sito è pensato per essere visualizzato a schermo intero su un computer.</p>
-</footer>
-</div>
+</main>
 
-<script src="script.js"></script>
-
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <!-- Bootstrap.JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
